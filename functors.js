@@ -33,7 +33,7 @@ const ex2 = map(_.head)
 
 
 assertDeepEqual(_.identity('do'), ex2(xs))
-console.log("passed!")
+console.log("passed!");
 
 // Exercise 3
 // ==========
