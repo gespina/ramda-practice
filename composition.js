@@ -99,7 +99,6 @@ console.log("passed");
 
 
 const result = _.compose(_.toUpper, get('title'), _.head);
-
 assertEqual('EVERYTHING SUCKS', result(articles));
 console.log("passed");
 
