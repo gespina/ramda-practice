@@ -39,15 +39,12 @@ console.log("passed!");
 // ==========
 // Use safeGet and _.head to find the first initial of the user
 const safeGet = _.curry(function(x,o){ return Maybe.of(o[x]) })
-const user = {id: 2, name: ''}
+const user = {id: 2, name: 'Alfred'}
 
 console.log("--------Start exercise 3--------")
 const ex3 = compose(map(_.head), safeGet('name'));
-// const ex3 = safeGet('name');
-//
-console.log('Result: ', Maybe('A').getOrElse(), ex3(user).value);
-//
-assertEqual(Maybe('A').getOrElse(), ex3(user).value)
+
+assertEqual(Maybe('A').getOrElse(), ex3(user).getOrElse())
 console.log("passed!")
 
 
